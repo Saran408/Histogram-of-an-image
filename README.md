@@ -28,7 +28,6 @@ Display the grayscale image.
 # Register Number:212220230044
 ```
 ```python
-
 # Write your code to find the histogram of gray scale image and color image channels.
 import cv2
 import matplotlib.pyplot as plt
@@ -40,9 +39,7 @@ cv2.imshow('Gray image',Gray_image)
 cv2.imshow ('colour image',Color_image)
 cv2.waitKey()
 
-
 # Display the histogram of gray scale image and any one channel histogram from color image
-
 hist  = cv2.calcHist([Gray_image], [0], None, [256], [0,256]) 
 histl=cv2.calcHist([Color_image], [1], None, [256], [0,256]) 
 plt.figure()
@@ -56,9 +53,7 @@ plt.show()
 plt.stem(histl)
 plt.title("color image")
 plt.show()
-
 # Write the code to perform histogram equalization of the image. 
-
 import cv2
 Gray_image=cv2.imread('tiger.jpg',0)
 equ=cv2.equalizeHist(Gray_image)
@@ -66,7 +61,6 @@ cv2.imshow('Gray Image',Gray_image)
 cv2.imshow('Equalized Image',equ)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
 ```
 ## Output:
 ### Input Grayscale Image and Color Image
